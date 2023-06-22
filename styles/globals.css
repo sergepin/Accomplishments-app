@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: garamond-premier-pro,Georgia,sans-serif;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.menu-bar{
+@apply bg-gradient-to-r from-stone-700 to-stone-600 shadow-md rounded-sm
+}
+
+.heading-1{
+  @apply block text-5xl font-semibold leading-tight tracking-normal text-inherit antialiased
+}
+
+.heading-2{
+  @apply block text-4xl font-semibold leading-[1.3] tracking-normal text-inherit antialiased
+}
+
+.heading-3{
+  @apply block text-3xl font-semibold leading-snug tracking-normal text-inherit antialiased
+}
+
+.heading-4{
+  @apply block text-2xl font-semibold leading-snug tracking-normal text-inherit antialiased
+}
+
+.heading-5{
+  @apply block text-xl font-semibold leading-snug tracking-normal text-inherit antialiased
+}
+
+.heading-6{
+  @apply block text-base font-semibold capitalize leading-relaxed tracking-normal text-inherit antialiased
+}
