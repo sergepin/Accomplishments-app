@@ -13,22 +13,11 @@ export default function highlights({ allPosts }: Posts) {
     )
     
 };
-//Can't use local API data on build because local data is not available
-/* export const getServerSideProps = async () => {
-    const response = await fetch('http://localhost:3000/api/highlights');
-    const data = await response.json();
-    return { props: { data } };
-  }; */
 
-/*   import {data} from '../data/highlightsData.js'
-
-export const getStaticProps = async () => {
-  return { props: { data } };
-}; */
-
-
+const apiUrl = process.env.NODE_ENV === 'production' ?  process.env.NEXT_PUBLIC_API_URL_PROD : process.env.NEXT_PUBLIC_API_URL_LOCAL;
+const apicall = apiUrl+'/api/posts'
 export async function getServerSideProps() {
-  let res = await fetch("/api/posts", {
+  let res = await fetch(`${apicall}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
