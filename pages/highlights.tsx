@@ -6,7 +6,7 @@ export default function highlights({ allPosts }: Posts) {
     return(
         <>
         <Layout>
-        <h1 className='heading-2'>Team Hihghlights</h1>
+        <h1 className='heading-2'>Team Highlights</h1>
         <Highlight highlights={allPosts}></Highlight>
         </Layout>
         </>
