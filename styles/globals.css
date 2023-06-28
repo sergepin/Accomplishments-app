@@ -27,6 +27,30 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.trending__title {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+.slideshow {
+  animation: slideUp 280s infinite;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.slideshow__container:hover .slideshow {
+  animation-play-state: paused;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 .menu-bar{
 @apply bg-gradient-to-r from-stone-700 to-stone-600 shadow-md rounded-sm
 }
