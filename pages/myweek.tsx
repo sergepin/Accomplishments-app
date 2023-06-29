@@ -117,7 +117,7 @@ export default function Myweek() {
         const response = await fetch("/api/posts", {
           method: "POST",
           body: JSON.stringify({
-            name: "Sergio Pinzon",
+            name: "Jhon Doe",
             comment: input.Value,
             createdAt: createdDt,
           }),
@@ -147,7 +147,7 @@ export default function Myweek() {
         const response = await fetch("/api/posts", {
           method: "POST",
           body: JSON.stringify({
-            name: "Sergio Pinzon",
+            name: "Jhon Doe",
             comment: input.Value,
             createdAt: createdDt,
           }),
